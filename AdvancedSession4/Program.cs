@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Collections.Specialized.BitVector32;
 
 namespace AdvancedSession4
 {
@@ -111,6 +112,28 @@ namespace AdvancedSession4
             //    Console.WriteLine(i);
             //}
 
+            #endregion
+            #region Built in Delegate Examples
+            #region Predicate
+            //Predicate<int> pred;
+            //pred=new Predicate<int>(CommonFunctions.TestNumbers);
+            //pred = CommonFunctions.TestNumbers;
+            //Console.WriteLine(pred.Invoke(10));
+
+            #endregion
+            #region Function Delegate
+            //Func<int,string> fun = CommonFunctions.Cast;
+            //Console.WriteLine(fun.Invoke(42));
+
+            #endregion
+            #region Action Delegate
+            //non generic action
+            //Action action = CommonFunctions.Print;
+            //action();
+            //generic action
+            //Action<String> action = CommonFunctions.Message;
+            //action.Invoke("Route");
+            #endregion
             #endregion
             #endregion
         }
