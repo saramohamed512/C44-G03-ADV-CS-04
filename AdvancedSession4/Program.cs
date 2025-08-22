@@ -153,20 +153,30 @@ namespace AdvancedSession4
 
             #endregion
             #region Lambda Expression
-            Predicate<int> Pred =  Number=>  Number > 0;
-            Console.WriteLine(Pred(0));
+            //Predicate<int> Pred =  Number=>  Number > 0;
+            //Console.WriteLine(Pred(0));
 
-            Func<int, string> func = Number=> Number.ToString(); 
+            //Func<int, string> func = Number=> Number.ToString(); 
 
-            Action<string> action = msg=>Console.WriteLine($"{msg}");
+            //Action<string> action = msg=>Console.WriteLine($"{msg}");
 
-            action.Invoke("Route");
+            //action.Invoke("Route");
 
 
 
+            #endregion
+            #region Function retrn function
+            //DelegateToAction()();
             #endregion
             #endregion
 
         }
+        #region Function retrn function
+        public static Action DelegateToAction()
+        {
+            return delegate () { Console.WriteLine("Helo From Method Function"); };
+        }
+        #endregion
     }
+
 }
