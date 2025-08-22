@@ -152,6 +152,19 @@ namespace AdvancedSession4
 
 
             #endregion
+            #region Lambda Expression
+            Predicate<int> Pred =  Number=>  Number > 0;
+            Console.WriteLine(Pred(0));
+
+            Func<int, string> func = Number=> Number.ToString(); 
+
+            Action<string> action = msg=>Console.WriteLine($"{msg}");
+
+            action.Invoke("Route");
+
+
+
+            #endregion
             #endregion
 
         }
