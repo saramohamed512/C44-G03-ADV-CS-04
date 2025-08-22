@@ -4,6 +4,52 @@ namespace AdvancedSession4
 {
     internal class Program
     {
+        #region Delegate Example03
+        //public static List<int> FindOddNumbers(List<int> Numbers)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (Numbers != null) {
+        //        for (int i = 0; i < Numbers.Count; i++) {
+        //            if (Numbers[i] % 2 == 1) {
+        //                Result.Add(Numbers[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+        //public static List<int> FindEvenNumbers(List<int> Numbers)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (Numbers != null)
+        //    {
+        //        for (int i = 0; i < Numbers.Count; i++)
+        //        {
+        //            if (Numbers[i] % 2 == 0)
+        //            {
+        //                Result.Add(Numbers[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        public static List<int> FindNumbers(List<int> Numbers, NumberCheckFunDelegate numberCheck) {
+            List<int> Result = new List<int>();
+            if (Numbers != null)
+            {
+                for (int i = 0; i < Numbers.Count; i++)
+                {
+                    if( numberCheck.Invoke(Numbers[i]))
+                    {
+                        Result.Add(Numbers[i]);
+                    }
+                }
+            }
+            return Result;
+
+        }
+
+        #endregion
         static void Main(string[] args)
         {
             #region Delegate 
@@ -42,7 +88,18 @@ namespace AdvancedSession4
             //    Console.WriteLine(name);
             //}
             #endregion
+            #region Delegate Example03
+            List<int> Numbers = new List<int>() { 1,2, 3, 4, 5 };
+            NumberCheckFunDelegate OddFunction = CheckNumbersCondition.checkOdd;
+            NumberCheckFunDelegate EvenFunction = CheckNumbersCondition.checkEven;
 
+            List<int> OddNumbers= FindNumbers(Numbers, OddFunction);
+            List<int> EvenNumbrs = FindNumbers(Numbers, EvenFunction);
+            foreach (int i in OddNumbers) { 
+                Console.WriteLine(i);
+            }
+
+            #endregion
             #endregion
         }
     }
