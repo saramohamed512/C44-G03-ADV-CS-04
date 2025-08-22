@@ -26,12 +26,21 @@ namespace AdvancedSession4
             #endregion
             #region Delegate Example02
             //Bubble sort Algo
-            int[] Numbers = { 8, 6, 7, 8, 9, 10 };
-            Helper.BubbleSort(Numbers, SortingTypes.CompareGraterThan);
-            Helper.BubbleSort(Numbers, SortingTypes.CompareLessThan);
-            foreach (int i in Numbers) { 
-                Console.WriteLine(i);
-            }
+            //int[] Numbers = { 8, 6, 7, 8, 9, 10 };
+            //Helper.BubbleSort(Numbers, SortingTypes.CompareGraterThan);
+            //Helper.BubbleSort(Numbers, SortingTypes.CompareLessThan);
+            //foreach (int i in Numbers) { 
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+            #region Delegate Example02 with Generic
+            //string[] Names = { "Mohamed", "Sara", "Ali", "Menna", "Aya" };
+            //SotingTypesFunctionDelegate<string, bool> sortStringAsc = SortingTypes.sortStrAsc;
+            //Helper<string>.BubbleSort(Names, SortingTypes.sortStrAsc);
+            //foreach (string name in Names)
+            //{
+            //    Console.WriteLine(name);
+            //}
             #endregion
 
             #endregion

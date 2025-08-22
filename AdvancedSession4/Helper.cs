@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace AdvancedSession4
 {
-    internal class Helper
+    internal class Helper<T>
     {
-        public static void swap(ref int a , ref int b)
+        public static void swap(ref T a , ref T b)
         {
-            int tem = a;
+            T tem = a;
             a= b;
             b= tem;
         }
 
-        public static void BubbleSort(int[] array, SotingTypesFunctionDelegate sortingTypesDel) {
+        public static void BubbleSort(T[] array, SotingTypesFunctionDelegate<T,bool> sortingTypesDel) {
             if (array is not null) {
                 for (int i = 0; i < array.Length; i++) {
                     for (int j = 0; j < array.Length-1-i; j++) { 
