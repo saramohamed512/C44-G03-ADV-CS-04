@@ -9,10 +9,10 @@ namespace AdvancedSession4
     internal class CommonFunctions
     {
         #region Predicate
-        public static bool TestNumbers(int Number)
-        {
-            return Number > 0;
-        }
+        //public static bool TestNumbers(int Number)
+        //{
+        //    return Number > 0;
+        //}
 
         #endregion
         #region Function Delegate

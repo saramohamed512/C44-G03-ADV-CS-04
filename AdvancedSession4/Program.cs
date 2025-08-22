@@ -1,5 +1,6 @@
 ﻿using System;
 using static System.Collections.Specialized.BitVector32;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AdvancedSession4
 {
@@ -135,7 +136,22 @@ namespace AdvancedSession4
             //action.Invoke("Route");
             #endregion
             #endregion
+            #region Anonymous Method
+            //Predicate<int> Pred = delegate (int Number) { return Number > 0; };
+            //Console.WriteLine(Pred(0));
+
+            //Func<int, string> func = delegate (int Number) { return Number.ToString(); };
+
+            //Action<string> action = delegate (string msg) { Console.WriteLine(msg); };
+
+            //action.Invoke("Route");
+            //Action actionNonGeneric = delegate () { Console.WriteLine("Helo From non generic action "); };
+
+
+
             #endregion
+            #endregion
+
         }
     }
 }
