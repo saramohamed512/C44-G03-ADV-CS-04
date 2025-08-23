@@ -17,6 +17,12 @@ namespace Assignment4
             Console.WriteLine("=============== Book Titles ===============");
             LibraryEngine.ProcessBooks(books, titleDelegate);
             #endregion
+
+            #region BCL Delegates
+            Func<Book, string> authorsDelegate = BookFunctions.GetAuthors;
+            Console.WriteLine("\n=============== Book Authors ===============");
+            LibraryEngine.ProcessBooks(books, new BookFunctionDelegate(authorsDelegate));
+            #endregion 
         }
     }
 }
