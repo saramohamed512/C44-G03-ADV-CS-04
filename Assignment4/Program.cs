@@ -32,6 +32,12 @@ namespace Assignment4
             Console.WriteLine("\n=============== Book ISBNs (Anonymous Method) ===============");
             LibraryEngine.ProcessBooks(books, isbnDelegate);
             #endregion
+
+            #region Lambda Expression (GetPublicationDate)
+            BookFunctionDelegate publicationDateDelegate = B => B.PublicationDate.ToString("yyyy-MM-dd");
+            Console.WriteLine("\n=============== Publication Dates (Lambda) ===============");
+            LibraryEngine.ProcessBooks(books, publicationDateDelegate);
+            #endregion
         }
     }
 }
