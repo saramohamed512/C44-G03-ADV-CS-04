@@ -8,13 +8,13 @@ namespace Assignment4
 {
     public class LibraryEngine
     {
-        //public static void ProcessBooks(List<Book> bookList, /*pointer to BookFunctions */ fPtr)
-        //{
-        //    foreach (Book B in bookList)
-        //    {
-        //        Console.WriteLine(fPtr(B));
-        //    }
-        //}
+        public static void ProcessBooks(List<Book> bookList, BookFunctionDelegate fPtr)
+        {
+            foreach (Book B in bookList)
+            {
+                Console.WriteLine(fPtr(B));
+            }
+        }
     }
 
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment4
 {
+    public delegate string BookFunctionDelegate(Book book);
     public class Book
     {
         public string ISBN { get; set; }
