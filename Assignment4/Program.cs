@@ -22,7 +22,16 @@ namespace Assignment4
             Func<Book, string> authorsDelegate = BookFunctions.GetAuthors;
             Console.WriteLine("\n=============== Book Authors ===============");
             LibraryEngine.ProcessBooks(books, new BookFunctionDelegate(authorsDelegate));
-            #endregion 
+            #endregion
+
+            #region Anonymous Method (GetISBN)
+            BookFunctionDelegate isbnDelegate = delegate (Book B)
+            {
+                return B.ISBN;
+            };
+            Console.WriteLine("\n=============== Book ISBNs (Anonymous Method) ===============");
+            LibraryEngine.ProcessBooks(books, isbnDelegate);
+            #endregion
         }
     }
 }
